@@ -1,8 +1,6 @@
-import  express,{Express} from "express"
-import MiddlewareConfig from "@config/middleware.config"
-import DataBaseConfig from "@config/database.config"
-
-
+import DataBaseConfig from "@config/database"
+import MiddlewareConfig from "@config/middleware"
+import express, { Express } from "express"
 
 class App{
     app: Express
