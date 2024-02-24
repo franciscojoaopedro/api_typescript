@@ -8,7 +8,7 @@ const routes=Router()
 
 // session ou login user
 routes.post("/session_user",login_user)
-routes.get("/list_users",auth_middleware,listar_usuarios)
-routes.post("/create_user",registar_user)
+routes.get("/users",auth_middleware,listar_usuarios)
+routes.post("/users",registar_user)
 
 export default routes

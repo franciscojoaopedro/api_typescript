@@ -5,7 +5,9 @@ export async function listar_usuarios(request:Request,response:Response){
     const filtro={
         $unset:{}
     }
-    const users=await User.find({},{password:0},{limit:2,})
+
+    const {size} = request.query
+    const users=await User.find({},{password:0},{limit: Number(size)})
     try {
         return response.json({message:"lista de usuário",users})
     } catch (error) {
